@@ -1,5 +1,5 @@
 const goToHomepage = () => {
-  location.href = "./index.html";
+  location.href = "../index.html";
   return false;
 };
 $(document).ready(function () {
