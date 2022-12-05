@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      var i = 0;
+      $(document).ready(() => {
+        $(".slidertitle,#slider img").hide();
+        showNextImage();
+        setInterval("showNextImage()", 3000);
+      });
+
+      function showNextImage() {
+        i++;
+        $("#sliderImage" + i)
+          .appendTo("#slider")
+          .fadeIn(1100)
+          .delay(3000)
+          .fadeOut(1100);
+        $("#title" + i)
+          .appendTo("#slider")
+          .fadeIn(1100)
+          .delay(3000)
+          .fadeOut(1100);
+        if (i == 3) {
+          i = 0;
+        }
+      }
+      const goToLoginPage = () => (location.href = "./login_page.html");
+      const goToCheckPage = () => (location.href = "./check_page.html");
+    </script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <img src="../assets/hotel.png" alt="" />
+        <h2>Mawcation</h2>
+      </div>
+      <div class="right">
+        <h4 class="menu home">home</h4>
+        <h4 class="menu check" onclick="goToCheckPage()">Price Check</h4>
+        <button onclick="goToLoginPage(); return false">
+          <h3>Logout</h3>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <div class="wrapper1">
+        <div class="highlight">
+          <h1>Nikmati Staycation bersama <span>Mawcation</span></h1>
+        </div>
+        <div id="slider">
+          <img
+            src="https://sultanjakarta.com/data/upload/images/d28c4f7445d31fd6da6b0d89660d2489_crop_920x530.jpg"
+            id="sliderImage1"
+          />
+
+          <img
+            src="https://melayupedia.com/foto_berita/2022/02/2022-02-16-ternyata-ini-bedanya-jumlah-bintang-di-tiap-hotel.jpg"
+            id="sliderImage2"
+          />
+
+          <img
+            src="https://asset.kompas.com/crops/it4CcX-f7G3QwQr56acHOUv9UN4=/0x0:930x620/750x500/data/photo/2020/10/05/5f7a85c72b647.png"
+            id="sliderImage3"
+          />
+        </div>
+      </div>
+      <div class="desc-hotel">
+        <div class="left">
+          <img src="../assets/hotel.png" alt="">
+        </div>
+        <div class="right">
+          <h1>Mawcation</h1>
+          <p>
+            Hotel Mawcation adalah hotel bintang 5 dengan lokasi yang sangat
+            strategis. Hotel ini berada di berbagai kota - kota besar di
+            Indonesia seperti Jakarta,Bandung, dan Surabaya, Hotel Mawcation
+            merupakan tempat yang tepat bagi untuk staycation bersama seseorang
+            yang spesial sembari menghabiskan waktu seharian dengan memanfaatkan
+            berbagai fasilitas yang ada. Dari Mawcation, para tamu dapat dengan
+            mudah menikmati ketenangan dan akses menuju ke semua sudut kota dan
+            ke berbagai destinasi wisata yang menarik.
+          </p>
+        </div>
+      </div>
+      <h1 class="list-title">Lokasi Hotel</h1>
+      <div class="collections">
+        <div class="add-kotak">
+          Dibuat oleh Maulana Arif Wijaya dengan sepenuh hati 💝
+        </div>
+        <div class="card">
+          <div class="wrapper-c">
+            <img
+              src="https://sultanjakarta.com/data/upload/images/d28c4f7445d31fd6da6b0d89660d2489_crop_920x530.jpg"
+              alt=""
+            />
+          </div>
+          <div class="detail">
+            <div class="left">
+              <h3>Surabaya</h3>
+              <h2>Booking ID : 1209381</h2>
+              <h4>Asemrowo</h4>
+            </div>
+            <div class="right">
+              <img src="../assets/hotel.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="wrapper-c">
+            <img
+              src="https://melayupedia.com/foto_berita/2022/02/2022-02-16-ternyata-ini-bedanya-jumlah-bintang-di-tiap-hotel.jpg"
+              alt=""
+            />
+          </div>
+          <div class="detail">
+            <div class="left">
+              <h3>Bandung</h3>
+              <h2>Booking ID : 1203382</h2>
+              <h4>Andir</h4>
+            </div>
+            <div class="right">
+              <img src="../assets/hotel.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="wrapper-c">
+            <img
+              src="https://asset.kompas.com/crops/it4CcX-f7G3QwQr56acHOUv9UN4=/0x0:930x620/750x500/data/photo/2020/10/05/5f7a85c72b647.png"
+              alt=""
+            />
+          </div>
+          <div class="detail">
+            <div class="left">
+              <h3>Jakarta Barat</h3>
+              <h2>Booking ID : 1304389</h2>
+              <h4>Cengkareng</h4>
+            </div>
+            <div class="right">
+              <img src="../assets/hotel.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+:root {
+  --primary: #81c6e8;
+}
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+nav {
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary);
+  background-color: white;
+}
+nav .left{
+  display: flex;
+  height: 32px;
+}
+nav .left h2 {
+  font-weight: bold;
+  margin-left: 24px;
+}
+nav .right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: capitalize;
+
+  height: 100%;
+}
+nav .right .menu {
+  margin-right: 24px;
+  cursor: pointer;
+  height: 100%;
+}
+nav .right .menu.home{
+  border-bottom: 2px solid var(--primary);
+}
+nav .right .menu:hover{
+  border-bottom: 2px solid var(--primary);
+}
+
+nav .right button {
+  color: var(--primary);
+  padding: 4px 16px;
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+}
+nav .right button:hover {
+  background-color: var(--primary);
+  color: white;
+  transition: all 0.2s ease;
+}
+main {
+  padding: 24px 40px;
+}
+main .wrapper1 {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  padding: 64px 0 ;
+  border-radius: 12px;
+}
+main .wrapper1 img {
+  width: 100%;
+  position: absolute;
+  bottom: -32px;
+  display: block;
+  z-index: -1;
+}
+.wrapper1{
+  display: inline-block;
+  
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    var(--primary) 100%
+  ); 
+}
+.highlight{
+  width: 40%;
+  font-weight: bold;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  padding: 0px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.highlight h1{
+  font-size: 48px;
+}
+.highlight h1 span{
+  border-bottom: 4px solid white;
+}
+.highlight p{
+  font-size: 16px;
+}
+.collections{
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 24px;
+  background-color: #81c6e8;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card img{
+  width: 100%;
+  cursor: pointer;
+  
+}
+.card img:hover{
+  transition: all .5s ease;
+  scale: 1.1;
+  
+}
+.card .wrapper-c{
+  overflow: hidden;
+}
+.card .detail{
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  background-color: white;
+  padding: 16px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.card .detail .left{
+  margin-left: 24px;
+}
+.card .detail .right{
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+.card .detail .right img{
+  height: 32px;
+  width: 32px;
+  cursor: default;
+}
+.card .detail .right img:hover{
+  scale: 1;
+}
+.card .detail .right h5{
+  font-weight: bold;
+  color: rgb(255, 213, 0);
+}
+
+.card .detail h3{
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 20px;
+}
+.card .detail h2{
+  color: #3C4048;
+  font-size: 18px;
+}
+.card .detail h4{
+  font-size: 14px;
+  color: #B2B2B2;
+}
+.list-title{
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 24px;
+}
+.add-kotak{
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  border-radius: 12px 12px 0px 0px;
+  background-color: var(--primary);
+  bottom: -60px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+.desc-hotel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.desc-hotel .left{
+  flex: 2;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+.desc-hotel .left img{
+  height: 200px;
+}
+.desc-hotel .right{
+  height: 100%;
+  flex: 3;
+  padding: 24px;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 12px;
+}
+.desc-hotel .right h1{
+  margin-bottom: 16px;
+}

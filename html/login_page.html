@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/login.js"></script>
+    <link rel="stylesheet" href="../css/loginstyle.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="container-left">
+          <div class="title">
+            <h1>MAWCATION</h1>
+          </div>
+          <img src="../assets/final.png" alt="">
+        </div>
+
+        <div class="container">
+          <h1 class="title">Please login to enter</h1>
+
+          <div class="inputs">
+            <input
+              class="c-textfield"
+              placeholder="Username"
+              type="text"
+              id="username"
+            />
+
+            <input
+              class="c-textfield"
+              type="password"
+              placeholder="Password"
+              id="password"
+            />
+            <div class="report" style="display: none;">
+              <p class="wrong"></p>
+            </div>
+          </div>
+
+          
+          <button id="login">Login</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

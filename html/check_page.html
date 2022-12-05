@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>check page</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script src="../js/checker.js"></script>
+    <script>
+      $(document).ready();
+      const goToHomePage = () => (location.href = "./index.html");
+      const goToLoginPage = () => (location.href = "./login_page.html");
+      const goToCheckPage = () => (location.href = "./check_page.html");
+    </script>
+    <link rel="stylesheet" href="../css/checkstyle.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <img src="../assets/hotel.png" alt="">
+        <h2>Mawcation</h2>
+      </div>
+      <div class="right">
+        <h4 class="menu" onclick="goToHomePage()">home</h4>
+        <h4 class="menu price" onclick="goToCheckPage()">Price Check</h4>
+        <button onclick="goToLoginPage(); return false">
+          <h3>Logout</h3>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <form>
+          <h2>Input to Check The Price</h2>
+          <div class="content">
+            <div class="text-container">
+              <label>Floor</label>
+              <input type="number" id="floor" min="1" required />
+            </div>
+            <div class="text-container">
+              <label>Type</label>
+              <select name="type" id="type">
+                <option value="5000">Standar</option>
+                <option value="6000">Superior</option>
+                <option value="7000">Deluxe</option>
+              </select>
+            </div>
+            <div class="text-container">
+              <label>Day(s)</label>
+              <input type="number" id="day" min="1" required />
+            </div>
+            <div class="text-container">
+              <label>Discount</label>
+              <select name="discount" id="discount">
+                <option value="member">Member</option>
+                <option value="birthday">Birthday Promo</option>
+                <option value="none">None</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="button" id="testt">Check</button>
+        </form>
+        <div class="container-right">
+          <div class="error" style="display: none;">
+            <p class="wrong"></p>
+          </div>
+          <div id="report" class="report" style="display: none">
+            <div class="wrapper-row">
+              <label>Price</label>
+              <p id="p-price"></p>
+            </div>
+            <div class="wrapper-row">
+              <label>Discount</label>
+              <p id="p-discount"></p>
+            </div>
+            <hr />
+            <div class="wrapper-row">
+              <label class="tp">Total</label>
+              <p id="p-payment" class="ptp"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>Dibuat oleh Maulana Arif Wijaya dengan sepenuh hati 💝</footer>
+  </body>
+</html>
